@@ -21,11 +21,11 @@ The `realtime_gradcam.py` script follows a clear, step-by-step process for every
 1.  **Capture Frame:** Grabs a frame from the webcam.
 2.  **Detect Face:** Uses the `haarcascade_frontalface_default.xml` file to find the (x, y, w, h) coordinates of a face.
 3.  **Crop & Preprocess:** Extracts the face, converts it to grayscale, resizes it to 48x48, and transforms it into a PyTorch tensor.
-4.  **Inference (The "What"):**
-    * The main `model` performs a fast prediction to get the final emotion label (e.g., "Happy").
-5.  **Explanation (The "Why"):**
+4.  **Inference:**
+    * The main `model` performs a fast prediction to get the final emotion label (e.g., "Happy", "Sad" etc.).
+5.  **Explanation:**
     * A *cloned* model (`gradcam_model`) runs a full forward and backward pass.
-    * **Hooks** are attached to the last convolutional layer (`conv_block4` / `conv4_2`) to "catch" the internal feature maps and gradients.
+    * **Hooks** are attached to the last convolutional layer (`conv_block4`) to "catch" the internal feature maps and gradients.
     * These are combined to create the Grad-CAM heatmap, which shows the "importance" of each pixel for the final decision.
 6.  **Display:** The script draws the heatmap (blended with the original face), the bounding box, and the predicted label onto the video frame.
 
@@ -36,7 +36,7 @@ The `realtime_gradcam.py` script follows a clear, step-by-step process for every
 * **`emotion.py`**: The **Training Script**. This file contains the complete pipeline to train your `EmotionCNN` model from scratch. It loads the `train` and `test` directories, calculates class weights for imbalance, and saves the best-performing model as `emotion_model_pytorch.pth`.
 * **`realtime_gradcam.py`**: The **Main Application**. This is the script you run for the live demo. It loads a pre-trained model and performs real-time, explainable emotion detection.
 * **`haarcascade_frontalface_default.xml`**: A pre-trained classifier from OpenCV. It is **required** to detect the location of faces in the video.
-* **`emotion_model_pytorch.pth`**: The saved model weights created by `emotion.py`.
+* **`emotion_model_pytorch_100.pth`**: The saved model weights created by `emotion.py`.
 
 ---
 
@@ -53,7 +53,7 @@ To run this project, you need Python and the following libraries.
     Ensure all three files (`emotion.py`, `realtime_gradcam.py`, `haarcascade_frontalface_default.xml`) are in the same directory.
 
 3.  **Prepare the Model:**
-    * If you have already trained the model, ensure `emotion_model_pytorch.pth` is in the folder.
+    * If you have already trained the model, ensure `emotion_model_pytorch_100.pth` is in the folder.
     * If you haven't trained it yet, run the training script first (see below).
 
 ---
