@@ -6,7 +6,16 @@ Its key feature is **Explainable AI (XAI)**. The application doesn't just tell y
 
 This project uses **PyTorch** for deep learning and **OpenCV** for real-time video processing.
 
-![Grad-CAM Example](https://via.placeholder.com/800x400?text=Image+of+Grad-CAM+heatmap+on+a+face)
+Output Example: 
+             <img width="299" height="299" alt="image" src="https://github.com/user-attachments/assets/dc6f3af5-6d5a-45ea-b78a-0e20b46af7d6" />
+        
+angry (Confidence: 99.5%)		 sad (Confidence: 72.6%)		happy (Confidence: 98.8%)
+ 		 		 
+disgust (Confidence: 100.0%)		surprise (Confidence: 95.8%)		fear (Confidence: 51.6%)
+
+				
+ 
+neutral (Confidence: 88.8%)
 
 ## 📋 Features
 
