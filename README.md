@@ -24,7 +24,7 @@ The `realtime_gradcam.py` script follows a clear, step-by-step process for every
 4.  **Inference:**
     * The main `model` performs a fast prediction to get the final emotion label (e.g., "Happy", "Sad" etc.).
 5.  **Explanation:**
-    * A *cloned* model (`gradcam_model`) runs a full forward and backward pass.
+    * A `gradcam_model` runs a full forward and backward pass.
     * **Hooks** are attached to the last convolutional layer (`conv_block4`) to "catch" the internal feature maps and gradients.
     * These are combined to create the Grad-CAM heatmap, which shows the "importance" of each pixel for the final decision.
 6.  **Display:** The script draws the heatmap (blended with the original face), the bounding box, and the predicted label onto the video frame.
