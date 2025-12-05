@@ -33,10 +33,10 @@ The `realtime_gradcam.py` script follows a clear, step-by-step process for every
 
 ## 📁 File Structure
 
-* **`emotion.py`**: The **Training Script**. This file contains the complete pipeline to train your `EmotionCNN` model from scratch. It loads the `train` and `test` directories, calculates class weights for imbalance, and saves the best-performing model as `emotion_model_pytorch.pth`.
+* **`emotion.py`**: The **Training Script**. This file contains the complete pipeline to train your `EmotionCNN` model from scratch. It loads the `train` and `test` directories, calculates class weights for imbalance, and saves the best-performing model as `bestModelOnCleanDataset_1.pth`.
 * **`realtime_gradcam.py`**: The **Main Application**. This is the script you run for the live demo. It loads a pre-trained model and performs real-time, explainable emotion detection.
 * **`haarcascade_frontalface_default.xml`**: A pre-trained classifier from OpenCV. It is **required** to detect the location of faces in the video.
-* **`emotion_model_pytorch_100.pth`**: The saved model weights created by `emotion.py`.
+* **`bestModelOnCleanDataset_1.pth`**: The saved model weights created by `emotion.py`.
 
 ---
 
@@ -53,7 +53,7 @@ To run this project, you need Python and the following libraries.
     Ensure all three files (`emotion.py`, `realtime_gradcam.py`, `haarcascade_frontalface_default.xml`) are in the same directory.
 
 3.  **Prepare the Model:**
-    * If you have already trained the model, ensure `emotion_model_pytorch_100.pth` is in the folder.
+    * If you have already trained the model, ensure `bestModelOnCleanDataset_1.pth` is in the folder.
     * If you haven't trained it yet, run the training script first (see below).
 
 ---
