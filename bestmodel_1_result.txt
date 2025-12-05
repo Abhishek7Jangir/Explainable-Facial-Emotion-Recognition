@@ -1,0 +1,144 @@
+PS C:\Users\HP\Downloads\Seventh Sem\DeepLearning\Emotion_Learner\BestModelTryingOnNewDataset> python -u "c:\Users\HP\Downloads\Seventh Sem\DeepLearning\Emotion_Learner\BestModelTryingOnNewDataset\emotion.py"
+Setting up parameters...
+Using device: cuda
+Setting up data transforms and loaders...
+Loading data from train and test...
+Classes found: ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']
+Training samples: 26546, Validation samples: 5617
+Calculating class weights...
+Class weights calculated:
+  Angry: 1.04
+  Disgust: 7.66
+  Fear: 1.10
+  Happy: 0.54
+  Neutral: 0.86
+  Sad: 0.86
+  Surprise: 1.21
+Building the PyTorch model...
+Model built successfully and moved to cuda.
+Initializing loss function (with weights) and optimizer...
+
+🚀 Starting Training...
+----------------------------------------------------------------------
+Epoch 1/50
+Train Loss: 1.9291 Acc: 0.1980 | Val Loss: 1.7359 Acc: 0.3139 | Time: 132s
+  New best model saved with accuracy: 0.3139
+Epoch 2/50
+Train Loss: 1.6983 Acc: 0.3478 | Val Loss: 1.4582 Acc: 0.4682 | Time: 125s
+  New best model saved with accuracy: 0.4682
+Epoch 3/50
+Train Loss: 1.4979 Acc: 0.4412 | Val Loss: 1.4585 Acc: 0.4679 | Time: 133s
+Epoch 4/50
+Train Loss: 1.3864 Acc: 0.4843 | Val Loss: 1.0728 Acc: 0.6256 | Time: 165s
+  New best model saved with accuracy: 0.6256
+Epoch 5/50
+Train Loss: 1.2957 Acc: 0.5181 | Val Loss: 0.9787 Acc: 0.6498 | Time: 131s
+  New best model saved with accuracy: 0.6498
+Epoch 6/50
+Train Loss: 1.2441 Acc: 0.5391 | Val Loss: 1.0635 Acc: 0.6048 | Time: 132s
+Epoch 7/50
+Train Loss: 1.2033 Acc: 0.5535 | Val Loss: 0.9336 Acc: 0.6667 | Time: 127s
+  New best model saved with accuracy: 0.6667
+Epoch 8/50
+Train Loss: 1.1495 Acc: 0.5724 | Val Loss: 0.9448 Acc: 0.6623 | Time: 126s
+Epoch 9/50
+Train Loss: 1.1353 Acc: 0.5788 | Val Loss: 0.9348 Acc: 0.6689 | Time: 126s
+  New best model saved with accuracy: 0.6689
+Epoch 10/50
+Train Loss: 1.1023 Acc: 0.5905 | Val Loss: 0.8270 Acc: 0.7050 | Time: 126s
+  New best model saved with accuracy: 0.7050
+Epoch 11/50
+Train Loss: 1.0824 Acc: 0.5993 | Val Loss: 0.8444 Acc: 0.7020 | Time: 126s
+Epoch 12/50
+Train Loss: 1.0588 Acc: 0.6053 | Val Loss: 0.7907 Acc: 0.7176 | Time: 127s
+  New best model saved with accuracy: 0.7176
+Epoch 13/50
+Train Loss: 1.0246 Acc: 0.6159 | Val Loss: 0.8109 Acc: 0.7061 | Time: 143s
+Epoch 14/50
+Train Loss: 1.0114 Acc: 0.6236 | Val Loss: 0.7567 Acc: 0.7228 | Time: 145s
+  New best model saved with accuracy: 0.7228
+Epoch 15/50
+Train Loss: 0.9810 Acc: 0.6288 | Val Loss: 0.7652 Acc: 0.7399 | Time: 170s
+  New best model saved with accuracy: 0.7399
+Epoch 16/50
+Train Loss: 0.9694 Acc: 0.6336 | Val Loss: 0.7167 Acc: 0.7468 | Time: 195s
+  New best model saved with accuracy: 0.7468
+Epoch 17/50
+Train Loss: 0.9443 Acc: 0.6451 | Val Loss: 0.7400 Acc: 0.7443 | Time: 167s
+Epoch 18/50
+Train Loss: 0.9369 Acc: 0.6459 | Val Loss: 0.7205 Acc: 0.7456 | Time: 160s
+Epoch 19/50
+Train Loss: 0.9137 Acc: 0.6506 | Val Loss: 0.6849 Acc: 0.7575 | Time: 159s
+  New best model saved with accuracy: 0.7575
+Epoch 20/50
+Train Loss: 0.9012 Acc: 0.6561 | Val Loss: 0.7327 Acc: 0.7394 | Time: 160s
+Epoch 21/50
+Train Loss: 0.8764 Acc: 0.6614 | Val Loss: 0.6840 Acc: 0.7630 | Time: 156s
+  New best model saved with accuracy: 0.7630
+Epoch 22/50
+Train Loss: 0.8672 Acc: 0.6684 | Val Loss: 0.7055 Acc: 0.7500 | Time: 156s
+Epoch 23/50
+Train Loss: 0.8410 Acc: 0.6755 | Val Loss: 0.7066 Acc: 0.7520 | Time: 165s
+Epoch 24/50
+Train Loss: 0.8334 Acc: 0.6810 | Val Loss: 0.6419 Acc: 0.7780 | Time: 174s
+  New best model saved with accuracy: 0.7780
+Epoch 25/50
+Train Loss: 0.8304 Acc: 0.6818 | Val Loss: 0.6882 Acc: 0.7595 | Time: 166s
+Epoch 26/50
+Train Loss: 0.7971 Acc: 0.6919 | Val Loss: 0.6542 Acc: 0.7737 | Time: 157s
+Epoch 27/50
+Train Loss: 0.7980 Acc: 0.6974 | Val Loss: 0.6878 Acc: 0.7655 | Time: 166s
+Epoch 28/50
+Train Loss: 0.7610 Acc: 0.7064 | Val Loss: 0.6760 Acc: 0.7673 | Time: 154s
+Epoch 29/50
+Train Loss: 0.7642 Acc: 0.7090 | Val Loss: 0.6388 Acc: 0.7737 | Time: 161s
+Epoch 30/50
+Train Loss: 0.7472 Acc: 0.7107 | Val Loss: 0.6306 Acc: 0.7848 | Time: 156s
+  New best model saved with accuracy: 0.7848
+Epoch 31/50
+Train Loss: 0.7159 Acc: 0.7205 | Val Loss: 0.6822 Acc: 0.7598 | Time: 157s
+Epoch 32/50
+Train Loss: 0.7268 Acc: 0.7160 | Val Loss: 0.6265 Acc: 0.7874 | Time: 152s
+  New best model saved with accuracy: 0.7874
+Epoch 33/50
+Train Loss: 0.7051 Acc: 0.7268 | Val Loss: 0.6659 Acc: 0.7693 | Time: 153s
+Epoch 34/50
+Train Loss: 0.6881 Acc: 0.7341 | Val Loss: 0.6665 Acc: 0.7727 | Time: 150s
+Epoch 35/50
+Train Loss: 0.6882 Acc: 0.7326 | Val Loss: 0.6336 Acc: 0.7807 | Time: 154s
+Epoch 36/50
+Train Loss: 0.6570 Acc: 0.7420 | Val Loss: 0.6618 Acc: 0.7803 | Time: 153s
+Epoch 37/50
+Train Loss: 0.6563 Acc: 0.7421 | Val Loss: 0.7412 Acc: 0.7643 | Time: 156s
+Epoch 38/50
+Train Loss: 0.6411 Acc: 0.7473 | Val Loss: 0.6240 Acc: 0.7849 | Time: 152s
+Epoch 39/50
+Train Loss: 0.6239 Acc: 0.7544 | Val Loss: 0.6339 Acc: 0.7840 | Time: 156s
+Epoch 40/50
+Train Loss: 0.6213 Acc: 0.7551 | Val Loss: 0.6372 Acc: 0.7794 | Time: 150s
+Epoch 41/50
+Train Loss: 0.6089 Acc: 0.7628 | Val Loss: 0.6225 Acc: 0.7896 | Time: 152s
+  New best model saved with accuracy: 0.7896
+Epoch 42/50
+Train Loss: 0.5879 Acc: 0.7705 | Val Loss: 0.6928 Acc: 0.7696 | Time: 153s
+Epoch 43/50
+Train Loss: 0.5618 Acc: 0.7800 | Val Loss: 0.6786 Acc: 0.7800 | Time: 152s
+Epoch 44/50
+Train Loss: 0.5691 Acc: 0.7785 | Val Loss: 0.6033 Acc: 0.7963 | Time: 153s
+  New best model saved with accuracy: 0.7963
+Epoch 45/50
+Train Loss: 0.5533 Acc: 0.7825 | Val Loss: 0.6370 Acc: 0.7970 | Time: 154s
+  New best model saved with accuracy: 0.7970
+Epoch 46/50
+Train Loss: 0.5553 Acc: 0.7821 | Val Loss: 0.6490 Acc: 0.7867 | Time: 164s
+Epoch 47/50
+Train Loss: 0.5235 Acc: 0.7928 | Val Loss: 0.6469 Acc: 0.7849 | Time: 255s
+Epoch 48/50
+Train Loss: 0.5133 Acc: 0.7977 | Val Loss: 0.6796 Acc: 0.7798 | Time: 165s
+Epoch 49/50
+Train Loss: 0.5016 Acc: 0.8011 | Val Loss: 0.6946 Acc: 0.7769 | Time: 160s
+Epoch 50/50
+Train Loss: 0.4952 Acc: 0.8080 | Val Loss: 0.6333 Acc: 0.7921 | Time: 158s
+----------------------------------------------------------------------
+Training complete. Best validation accuracy: 0.7970
+Best model saved as 'bestModelOnCleanDataset_1.pth'
