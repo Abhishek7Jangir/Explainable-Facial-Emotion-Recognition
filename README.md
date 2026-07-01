@@ -57,11 +57,3 @@ To run this project, you need Python and the following libraries.
     * If you haven't trained it yet, run the training script first (see below).
 
 ---
-
-## 🚀 How to Run
-
-### 1. Train the Model (Optional if you already have the .pth file)
-This script trains the model using the images in your `train` and `test` folders.
-
-```bash
-python emotion.py
