@@ -6,6 +6,14 @@ Its key feature is **Explainable AI (XAI)**. The application doesn't just tell y
 
 This project uses **PyTorch** for deep learning and **OpenCV** for real-time video processing.
 
+## Results
+- **79.7% accuracy** on the FER-2013 benchmark (7-class emotion classification)
+- Real-time inference at [X] FPS on [your hardware, e.g., "CPU-only, no GPU required"]
+
+## Demo
+[screenshot or GIF here]
+
+
 ## 📋 Features
 
 * **Real-Time Emotion Classification:** Identifies 7 different emotions (Angry, Disgust, Fear, Happy, Neutral, Sad, Surprise) from a live webcam feed.
