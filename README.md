@@ -7,11 +7,32 @@ Its key feature is **Explainable AI (XAI)**. The application doesn't just tell y
 This project uses **PyTorch** for deep learning and **OpenCV** for real-time video processing.
 
 ## Results
-- **79.7% accuracy** on the FER-2013 benchmark (7-class emotion classification)
-- Real-time inference at [X] FPS on [your hardware, e.g., "CPU-only, no GPU required"]
+
+Evaluated on the FER-2013 test set (5,617 images, 7 emotion classes):
+
+- **Overall accuracy: 79.7%**
+- **Weighted F1-score: 0.798**
+
+| Emotion  | Precision | Recall | F1-score |
+|----------|-----------|--------|----------|
+| Angry    | 0.704     | 0.851  | 0.771    |
+| Disgust  | 0.727     | 0.753  | 0.740    |
+| Fear     | 0.591     | 0.786  | 0.675    |
+| Happy    | 0.945     | 0.908  | 0.926    |
+| Neutral  | 0.759     | 0.733  | 0.745    |
+| Sad      | 0.720     | 0.622  | 0.667    |
+| Surprise | 0.866     | 0.867  | 0.866    |
+
+Trained for 50 epochs on an NVIDIA MX450 GPU, using class-weighted loss to handle FER-2013's natural class imbalance (Disgust is ~7x rarer than Happy).
+
+![Confusion Matrix](assets/evaluation_confusion_matrix.png)
+![ROC Curve](assets/evaluation_roc_curve.png)
 
 ## Demo
-[screenshot or GIF here]
+
+![Emotion Detection Demo](assets/demo_heatmap.png)
+
+*Grad-CAM heatmaps at native 48×48 FER-2013 resolution (upscaled for display). The model correctly attends to nose/mouth regions for Disgust and Happy, and eye/brow regions for Angry.*
 
 
 ## 📋 Features
