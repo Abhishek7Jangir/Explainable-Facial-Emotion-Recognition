@@ -55,7 +55,7 @@ To run this project, you need Python and the following libraries.
 3.  **Prepare the Model:**
     * If you have already trained the model, ensure `bestModelOnCleanDataset_1.pth` is in the folder.
     * If you haven't trained it yet, run the training script first (see below).
-    * ```bash
+     ```bash
       python emotion.py
 
 ---
