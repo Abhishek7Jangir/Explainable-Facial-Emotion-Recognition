@@ -71,7 +71,7 @@ class EmotionCNN(nn.Module):
             nn.BatchNorm1d(256),
             nn.ReLU(),
             nn.Dropout(0.5),
-            nn.Linear(256, num_classes) # No softmax here
+            nn.Linear(256, num_classes)
         )
 
     def forward(self, x):
@@ -157,7 +157,7 @@ def main():
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
 
     # --- 6. THE TRAINING LOOP ---
-    print("\n🚀 Starting Training...")
+    print("\nStarting Training...")
     print("-" * 70)
     
     best_val_acc = 0.0
