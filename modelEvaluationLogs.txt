@@ -1,0 +1,36 @@
+Using device: cuda
+Loading test data from test...
+Found 5617 images belonging to 7 classes.
+Classes: ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']
+Loading model 'blueprint' (EmotionCNN) with 7 classes...
+Loading saved 'brain' from bestModelOnCleanDataset_1.pth...
+Model loaded successfully.
+Running model on test data...
+
+======================================================================
+--- Classification Report ---
+              precision    recall  f1-score   support
+
+       angry      0.704     0.851     0.771       517
+     disgust      0.727     0.753     0.740        85
+        fear      0.591     0.786     0.675       398
+       happy      0.945     0.908     0.926      1623
+     neutral      0.759     0.733     0.745      1145
+         sad      0.720     0.622     0.667      1045
+    surprise      0.866     0.867     0.866       804
+
+    accuracy                          0.797      5617
+   macro avg      0.759     0.789     0.770      5617
+weighted avg      0.803     0.797     0.798      5617
+
+======================================================================
+
+Plotting Confusion Matrix...
+Saved Confusion Matrix to evaluation_confusion_matrix.png
+
+Plotting ROC Curve...
+c:\Users\HP\Downloads\Seventh Sem\DeepLearning\Emotion_Learner\BestModelTryingOnNewDataset\rocGenerate.py:232: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  colors = plt.cm.get_cmap('tab10', num_classes)
+Saved ROC Curve to evaluation_roc_curve.png
+
+--- Evaluation Complete ---
