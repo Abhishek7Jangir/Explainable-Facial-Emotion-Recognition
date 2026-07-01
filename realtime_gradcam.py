@@ -15,7 +15,7 @@ IMG_H, IMG_W = 48, 48
 CLASS_NAMES = ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']
 NUM_CLASSES = len(CLASS_NAMES)
 MODEL_PATH = 'bestModelOnCleanDataset_1.pth'
-CASCADE_PATH = 'haarcascade_frontalface_default.xml'  # ensure this file exists
+CASCADE_PATH = 'haarcascade_frontalface_default.xml'
 
 # -------- MODEL (same as training) --------
 class EmotionCNN(nn.Module):
@@ -80,7 +80,7 @@ class EmotionCNN(nn.Module):
             nn.BatchNorm1d(256),
             nn.ReLU(),
             nn.Dropout(0.5),
-            nn.Linear(256, num_classes) # No softmax here
+            nn.Linear(256, num_classes)
         )
 
     def forward(self, x):
