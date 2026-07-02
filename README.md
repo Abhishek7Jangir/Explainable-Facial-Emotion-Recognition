@@ -12,6 +12,7 @@ Evaluated on the FER-2013 test set (5,617 images, 7 emotion classes):
 
 - **Overall accuracy: 79.7%**
 - **Weighted F1-score: 0.798**
+- **Real-time inference: ~8–10 FPS** on an NVIDIA MX450 GPU
 
 | Emotion  | Precision | Recall | F1-score |
 |----------|-----------|--------|----------|
@@ -24,6 +25,10 @@ Evaluated on the FER-2013 test set (5,617 images, 7 emotion classes):
 | Surprise | 0.866     | 0.867  | 0.866    |
 
 Trained for 50 epochs on an NVIDIA MX450 GPU, using class-weighted loss to handle FER-2013's natural class imbalance (Disgust is ~7x rarer than Happy).
+
+**Note on FPS:** Grad-CAM requires a full backward pass in addition to the forward pass, and Haar Cascade face detection runs on CPU — both add overhead beyond plain classification speed. Classification-only inference (no Grad-CAM) would run significantly faster.
+
+Full training and evaluation logs (including the full classification report) are available in [`logs/`](logs/).
 
 <p align="center">
   <img src="assets/evaluation_confusion_matrix.png" alt="Confusion Matrix" width="49%" />
@@ -64,8 +69,8 @@ Trained for 50 epochs on an NVIDIA MX450 GPU, using class-weighted loss to handl
     </td>
   </tr>
 </table>
-*Grad-CAM heatmaps at native 48×48 FER-2013 resolution. The model correctly attends to nose/mouth regions for Disgust and Happy, and eye/brow regions for Angry.*
 
+*Grad-CAM heatmaps at native 48×48 FER-2013 resolution. The model correctly attends to nose/mouth regions for Disgust and Happy, and eye/brow regions for Angry.*
 
 ## 📋 Features
 
@@ -98,6 +103,8 @@ The `realtime_gradcam.py` script follows a clear, step-by-step process for every
 * **`realtime_gradcam.py`**: The **Main Application**. This is the script you run for the live demo. It loads a pre-trained model and performs real-time, explainable emotion detection.
 * **`haarcascade_frontalface_default.xml`**: A pre-trained classifier from OpenCV. It is **required** to detect the location of faces in the video.
 * **`bestModelOnCleanDataset_1.pth`**: The saved model weights created by `emotion.py`.
+* **`assets/`**: Demo images, confusion matrix, and ROC curve.
+* **`logs/`**: Full training and evaluation logs.
 
 ---
 
@@ -118,5 +125,4 @@ To run this project, you need Python and the following libraries.
     * If you haven't trained it yet, run the training script first (see below).
      ```bash
       python emotion.py
-
----
+      ```
