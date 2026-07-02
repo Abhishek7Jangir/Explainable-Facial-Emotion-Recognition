@@ -6,35 +6,6 @@ Its key feature is **Explainable AI (XAI)**. The application doesn't just tell y
 
 This project uses **PyTorch** for deep learning and **OpenCV** for real-time video processing.
 
-## Results
-
-Evaluated on the FER-2013 test set (5,617 images, 7 emotion classes):
-
-- **Overall accuracy: 79.7%**
-- **Weighted F1-score: 0.798**
-- **Real-time inference: ~8–10 FPS** on an NVIDIA MX450 GPU
-
-| Emotion  | Precision | Recall | F1-score |
-|----------|-----------|--------|----------|
-| Angry    | 0.704     | 0.851  | 0.771    |
-| Disgust  | 0.727     | 0.753  | 0.740    |
-| Fear     | 0.591     | 0.786  | 0.675    |
-| Happy    | 0.945     | 0.908  | 0.926    |
-| Neutral  | 0.759     | 0.733  | 0.745    |
-| Sad      | 0.720     | 0.622  | 0.667    |
-| Surprise | 0.866     | 0.867  | 0.866    |
-
-Trained for 50 epochs on an NVIDIA MX450 GPU, using class-weighted loss to handle FER-2013's natural class imbalance (Disgust is ~7x rarer than Happy).
-
-**Note on FPS:** Grad-CAM requires a full backward pass in addition to the forward pass, and Haar Cascade face detection runs on CPU — both add overhead beyond plain classification speed. Classification-only inference (no Grad-CAM) would run significantly faster.
-
-Full training and evaluation logs (including the full classification report) are available in [`logs/`](logs/).
-
-<p align="center">
-  <img src="assets/evaluation_confusion_matrix.png" alt="Confusion Matrix" width="49%" />
-  <img src="assets/evaluation_roc_curve.png" alt="ROC Curve" width="49%" />
-</p>
-
 ## Demo
 
 <table>
@@ -71,6 +42,37 @@ Full training and evaluation logs (including the full classification report) are
 </table>
 
 *Grad-CAM heatmaps at native 48×48 FER-2013 resolution. The model correctly attends to nose/mouth regions for Disgust and Happy, and eye/brow regions for Angry.*
+
+
+## Results
+
+Evaluated on the FER-2013 test set (5,617 images, 7 emotion classes):
+
+- **Overall accuracy: 79.7%**
+- **Weighted F1-score: 0.798**
+- **Real-time inference: ~8–10 FPS** on an NVIDIA MX450 GPU
+
+| Emotion  | Precision | Recall | F1-score |
+|----------|-----------|--------|----------|
+| Angry    | 0.704     | 0.851  | 0.771    |
+| Disgust  | 0.727     | 0.753  | 0.740    |
+| Fear     | 0.591     | 0.786  | 0.675    |
+| Happy    | 0.945     | 0.908  | 0.926    |
+| Neutral  | 0.759     | 0.733  | 0.745    |
+| Sad      | 0.720     | 0.622  | 0.667    |
+| Surprise | 0.866     | 0.867  | 0.866    |
+
+Trained for 50 epochs on an NVIDIA MX450 GPU, using class-weighted loss to handle FER-2013's natural class imbalance (Disgust is ~7x rarer than Happy).
+
+**Note on FPS:** Grad-CAM requires a full backward pass in addition to the forward pass, and Haar Cascade face detection runs on CPU — both add overhead beyond plain classification speed. Classification-only inference (no Grad-CAM) would run significantly faster.
+
+Full training and evaluation logs (including the full classification report) are available in [`logs/`](logs/).
+
+<p align="center">
+  <img src="assets/evaluation_confusion_matrix.png" alt="Confusion Matrix" width="49%" />
+  <img src="assets/evaluation_roc_curve.png" alt="ROC Curve" width="49%" />
+</p>
+
 
 ## 📋 Features
 
