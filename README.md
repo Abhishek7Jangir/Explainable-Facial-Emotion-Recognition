@@ -25,8 +25,7 @@ Evaluated on the FER-2013 test set (5,617 images, 7 emotion classes):
 
 Trained for 50 epochs on an NVIDIA MX450 GPU, using class-weighted loss to handle FER-2013's natural class imbalance (Disgust is ~7x rarer than Happy).
 
-![Confusion Matrix](assets/evaluation_confusion_matrix.png)
-![ROC Curve](assets/evaluation_roc_curve.png)
+![Confusion Matrix](assets/evaluation_confusion_matrix.png)  ![ROC Curve](assets/evaluation_roc_curve.png)
 
 ## Demo
 
