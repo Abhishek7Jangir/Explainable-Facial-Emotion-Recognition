@@ -30,7 +30,7 @@ Trained for 50 epochs on an NVIDIA MX450 GPU, using class-weighted loss to handl
 
 ## Demo
 
-![Emotion Detection Demo](assets/Screenshot 2026-07-02 080532.png)
+![Emotion Detection Demo](assets/angry.png)
 
 *Grad-CAM heatmaps at native 48×48 FER-2013 resolution (upscaled for display). The model correctly attends to nose/mouth regions for Disgust and Happy, and eye/brow regions for Angry.*
 
