@@ -36,31 +36,31 @@ Trained for 50 epochs on an NVIDIA MX450 GPU, using class-weighted loss to handl
   <tr>
     <td align="center">
       <img src="assets/angry99.5.png" width="100" alt="Image 1"><br>
-      <sub><b>Angry (Confidence: 99.5%)</b></sub>
+      <sub><b>Angry<br>(Confidence: 99.5%)</b></sub>
     </td>
     <td align="center">
       <img src="assets/disgust_100.png" width="100" alt="Image 2"><br>
-      <sub><b>Disgust (Confidence: 100%)</b></sub>
+      <sub><b>Disgust<br>(Confidence: 100%)</b></sub>
     </td>
     <td align="center">
       <img src="assets/fear_51.6.png" width="100" alt="Image 3"><br>
-      <sub><b>Fear (Confidence: 51.6%)</b></sub>
+      <sub><b>Fear<br>(Confidence: 51.6%)</b></sub>
     </td>
     <td align="center">
       <img src="assets/happy_98.8.png" width="100" alt="Image 4"><br>
-      <sub><b>Happy (Confidence: 98.8%)</b></sub>
+      <sub><b>Happy<br>(Confidence: 98.8%)</b></sub>
     </td>
     <td align="center">
       <img src="assets/neutral_88.8.png" width="100" alt="Image 5"><br>
-      <sub><b>Neutral (Confidence: 88.8%)</b></sub>
+      <sub><b>Neutral<br>(Confidence: 88.8%)</b></sub>
     </td>
     <td align="center">
       <img src="assets/sad_72.6.png" width="100" alt="Image 6"><br>
-      <sub><b>Sad (Confidence: 72.6%)</b></sub>
+      <sub><b>Sad<br>(Confidence: 72.6%)</b></sub>
     </td>
     <td align="center">
       <img src="assets/surprise_95.8.png" width="100" alt="Image 7"><br>
-      <sub><b>Surprise (Confidence: 95.8%)</b></sub>
+      <sub><b>Surprise<br>(Confidence: 95.8%)</b></sub>
     </td>
   </tr>
 </table>
