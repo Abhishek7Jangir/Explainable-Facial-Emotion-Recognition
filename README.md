@@ -114,7 +114,7 @@ To run this project, you need Python and the following libraries.
 
 1.  **Install Dependencies:**
     ```bash
-    pip install torch torchvision opencv-python numpy scikit-learn pillow
+        pip install -r requirements.txt
     ```
 
 2.  **Get Project Files:**
